@@ -35,7 +35,7 @@ module DiscourseSubscriptions
       params.require(:id)
       begin
         product = ::Stripe::Product.retrieve(params[:id])
-        plans = ::Stripe::Price.list(active: true, product: params[:id])
+        plans = ::Stripe::Price.list(active: true, product: params[:id], limit: 100)
 
         response = {
           product: serialize_product(product),
