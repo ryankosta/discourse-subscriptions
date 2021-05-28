@@ -7,7 +7,7 @@ module DiscourseSubscriptions
       include DiscourseSubscriptions::Group
       before_action :set_api_key
 
-      PAGE_LIMIT = 10
+      PAGE_LIMIT = 100
 
       def index
         begin
