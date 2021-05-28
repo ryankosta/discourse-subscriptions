@@ -85,7 +85,7 @@ module DiscourseSubscriptions
       private
 
       def product_params
-        { product: params[:product_id] } if params[:product_id]
+        { product: params[:product_id], limit: 100 } if params[:product_id]
       end
     end
   end
